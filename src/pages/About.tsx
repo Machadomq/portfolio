@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Calendar, MapPin, Code, Briefcase, GraduationCap, Award } from 'lucide-react'
+import { Calendar, MapPin, Code, Briefcase, GraduationCap } from 'lucide-react'
 
 const About = () => {
     const skills = [
