@@ -64,7 +64,7 @@ const Home = () => {
                             className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6"
                         >
                             <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-                                Seu Nome
+                                Gabriel Machado
                             </span>
                         </motion.h1>
 
@@ -72,15 +72,14 @@ const Home = () => {
                             variants={itemVariants}
                             className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
                         >
-                            Desenvolvedor Full Stack apaixonado por criar soluções inovadoras e experiências digitais excepcionais
+                            Gradundando em engenharia de software
                         </motion.p>
 
                         <motion.p
                             variants={itemVariants}
                             className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto"
                         >
-                            Especializado em React, Node.js, TypeScript e tecnologias modernas.
-                            Transformo ideias em código e código em soluções reais.
+                            Bem-vindo ao meu portfolio pessoal, veja meus projetos e habilidades.
                         </motion.p>
 
                         <motion.div

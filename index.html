@@ -13,7 +13,7 @@
     <script>
         // Aplicar tema antes do React carregar para evitar flash
         // GitHub Pages SPA redirect handler
-        (function() {
+        (function () {
             const redirect = sessionStorage.redirect;
             delete sessionStorage.redirect;
             if (redirect && redirect != location.href) {
