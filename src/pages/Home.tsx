@@ -181,7 +181,7 @@ const Home = () => {
                         transition={{ duration: 2, repeat: Infinity }}
                         className="text-gray-400 dark:text-gray-500"
                     >
-                        <ArrowDown className="w-6 h-6" />
+                        
                     </motion.div>
                 </motion.div>
             </section>
