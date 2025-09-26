@@ -52,8 +52,8 @@ const Home = () => {
                                 <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 p-1">
                                     <div className="w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center relative">
                                         <img
-                                            src="src/img/IMG_2209.jpg"
-                                            alt=""
+                                            src="/profile.jpg"
+                                            alt="Gabriel Machado"
                                             className="absolute inset-0 w-full h-full object-cover rounded-full z-0"
                                             style={{ zIndex: 0 }}
                                         />
@@ -79,7 +79,7 @@ const Home = () => {
                             variants={itemVariants}
                             className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
                         >
-                            Gradundando em engenharia de software
+                            Graduando em engenharia de software
                         </motion.p>
 
                         <motion.p
