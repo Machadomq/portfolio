@@ -48,39 +48,6 @@ const Projects = () => {
             live: '#',
             featured: false
         },
-        {
-            id: 4,
-            title: 'RESTful API Gateway',
-            category: 'api',
-            description: 'Gateway de API escalável com autenticação JWT, rate limiting, cache Redis e documentação automática com Swagger.',
-            image: '/api/placeholder/600/400',
-            technologies: ['Node.js', 'Express', 'Redis', 'JWT', 'Swagger'],
-            github: '#',
-            live: '#',
-            featured: true
-        },
-        {
-            id: 5,
-            title: 'Code Generator CLI',
-            category: 'tools',
-            description: 'Ferramenta de linha de comando para gerar boilerplates de projetos com templates customizáveis e configurações automatizadas.',
-            image: '/api/placeholder/600/400',
-            technologies: ['Python', 'Click', 'Jinja2', 'YAML'],
-            github: '#',
-            live: '#',
-            featured: false
-        },
-        {
-            id: 6,
-            title: 'Social Media Dashboard',
-            category: 'web',
-            description: 'Dashboard para gerenciamento de múltiplas contas de redes sociais com analytics avançados, agendamento de posts e métricas em tempo real.',
-            image: '/api/placeholder/600/400',
-            technologies: ['Next.js', 'TypeScript', 'Prisma', 'Charts.js'],
-            github: '#',
-            live: '#',
-            featured: false
-        },
     ]
 
     const filteredProjects = projects.filter(project => {
