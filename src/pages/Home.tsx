@@ -65,7 +65,6 @@ const Home = () => {
                                                 console.log('Erro ao carregar imagem:', profileImageUrl)
                                             }}
                                         />
-                                        <User className="w-16 h-16 text-gray-400 dark:text-gray-500 z-10" />
                                     </div>
                                 </div>
                                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white dark:border-gray-900 animate-pulse" />
