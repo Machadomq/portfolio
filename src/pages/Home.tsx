@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowDown, Download, Github, Linkedin, Mail } from 'lucide-react'
+import { ArrowDown, Download, Github, Linkedin, Mail, User } from 'lucide-react'
 import { useInView } from 'react-intersection-observer'
 import { Link } from 'react-router-dom'
 
@@ -8,6 +8,10 @@ const Home = () => {
         threshold: 0.1,
         triggerOnce: true,
     })
+
+    // URLs corretas para GitHub Pages
+    const profileImageUrl = '/portfolio/profile.jpg'
+    const cvFileUrl = '/portfolio/cv.pdf'
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -52,14 +56,16 @@ const Home = () => {
                                 <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 p-1">
                                     <div className="w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center relative">
                                         <img
-                                            src="/portfolio/profile.jpg"
+                                            src={profileImageUrl}
                                             alt="Gabriel Machado"
                                             className="absolute inset-0 w-full h-full object-cover rounded-full z-0"
                                             style={{ zIndex: 0 }}
+                                            onError={(e) => {
+                                                e.currentTarget.style.display = 'none'
+                                                console.log('Erro ao carregar imagem:', profileImageUrl)
+                                            }}
                                         />
-                                        {/* You can place icons here with higher z-index if needed */}
-                                        {/* Example: */}
-                                        {/* <Icon className="relative z-10" /> */}
+                                        <User className="w-16 h-16 text-gray-400 dark:text-gray-500 z-10" />
                                     </div>
                                 </div>
                                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white dark:border-gray-900 animate-pulse" />
@@ -105,7 +111,7 @@ const Home = () => {
                             </Link>
 
                             <motion.a
-                                href="/portfolio/cv.pdf"
+                                href={cvFileUrl}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="px-8 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors flex items-center space-x-2"
