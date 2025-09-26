@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowDown, Download, Github, Linkedin, Mail, User } from 'lucide-react'
+import { ArrowDown, Download, Github, Linkedin, Mail } from 'lucide-react'
 import { useInView } from 'react-intersection-observer'
 import { Link } from 'react-router-dom'
 
@@ -65,7 +65,6 @@ const Home = () => {
                                                 console.log('Erro ao carregar imagem:', profileImageUrl)
                                             }}
                                         />
-                                        <User className="" />
                                     </div>
                                 </div>
                                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white dark:border-gray-900 animate-pulse" />
