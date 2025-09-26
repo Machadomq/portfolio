@@ -192,7 +192,7 @@ const Home = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                            Tecnologias & Habilidades
+                            Tecnologias & Ferramentas
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
                             Conjunto de tecnologias modernas que utilizo para criar soluções robustas e escaláveis
@@ -201,8 +201,8 @@ const Home = () => {
 
                     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
                         {[
-                            'React', 'TypeScript', 'Node.js', 'Python', 'JavaScript', 'Next.js',
-                            'Tailwind', 'MongoDB', 'PostgreSQL', 'Docker', 'AWS', 'Git'
+                            'React', 'TypeScript', 'Java', 'Python', 'JavaScript', 'Spring Boot',
+                            'Tailwind', 'MySQL', 'Insominia', 'Flask', 'Git'
                         ].map((skill, index) => (
                             <motion.div
                                 key={skill}

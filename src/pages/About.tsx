@@ -59,8 +59,7 @@ const About = () => {
                         Sobre Mim
                     </h1>
                     <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                        Desenvolvedor apaixonado por tecnologia com mais de 5 anos de experiência criando soluções
-                        inovadoras que fazem a diferença na vida das pessoas.
+                       Sou estudante Bacharel em Engenharia de software na Universidade Catolica de Santa Catarina, e trabalho em uma industria alimenticia em Jaraguá do sul, Santa Catarina. 
                     </p>
                 </motion.div>
 
@@ -83,7 +82,7 @@ const About = () => {
 
                             <div className="flex-1 text-center lg:text-left">
                                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                                    Seu Nome
+                                    Gabriel Machado Queiroz
                                 </h2>
                                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
@@ -95,11 +94,10 @@ const About = () => {
                                 <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-gray-600 dark:text-gray-300">
                                     <div className="flex items-center justify-center lg:justify-start space-x-2">
                                         <MapPin className="w-5 h-5 text-blue-600" />
-                                        <span>São Paulo, Brasil</span>
+                                        <span>Santa Catarina, Brasil</span>
                                     </div>
                                     <div className="flex items-center justify-center lg:justify-start space-x-2">
-                                        <Briefcase className="w-5 h-5 text-blue-600" />
-                                        <span>5+ anos de experiência</span>
+                                       
                                     </div>
                                 </div>
                             </div>
