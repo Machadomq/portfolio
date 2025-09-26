@@ -3,45 +3,38 @@ import { Calendar, MapPin, Code, GraduationCap } from 'lucide-react'
 
 const About = () => {
     const skills = [
-        { category: 'Frontend', items: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Vue.js'] },
-        { category: 'Backend', items: ['Node.js', 'Python', 'Express', 'FastAPI', 'PostgreSQL'] },
-        { category: 'DevOps', items: ['Docker', 'AWS', 'CI/CD', 'Linux', 'Nginx'] },
-        { category: 'Ferramentas', items: ['Git', 'VS Code', 'Figma', 'Postman', 'Jira'] },
+        { category: 'Frontend', items: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'JavaScript'] },
+        { category: 'Backend', items: ['Java', 'Python', 'Spring-boot', 'Flask', 'SQL'] },
+        { category: 'Ferramentas', items: ['Git', 'Insomnia', 'MySQL', 'Postman', 'MongoDB'] },
     ]
 
     const experience = [
         {
-            title: 'Senior Full Stack Developer',
-            company: 'Tech Corp',
-            period: '2022 - Presente',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            title: 'Apontador de pedidos',
+            company: 'Vitalin Sem Gluten',
+            period: 'junho 2025 - Presente',
+            description: 'Apontar as ordens de pedidos no sistema, garantindo que todas as informações estejam corretas e atualizadas. Calcular as perdas em relação ao estoque e o valor da mão de obra. Colaborar com a equipe de produção para assegurar que as ordens de produção sejam entregues de maneira eficiente e dentro dos prazos estabelecidos.'
         },
         {
-            title: 'Frontend Developer',
-            company: 'StartUp XYZ',
-            period: '2020 - 2022',
-            description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-        },
-        {
-            title: 'Junior Developer',
-            company: 'Web Solutions',
-            period: '2019 - 2020',
-            description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+            title: 'Assistente de Laboratorio',
+            company: 'LUCI LUCI',
+            period: 'novembro 2023 - agosto 2024',
+            description: 'Responsavel pelo controle de qualidade dos produtos, realizando testes físico-químicos para garantir a conformidade com os padrões estabelecidos. Auxiliar no desenvolvimento de novos produtos, colaborando com a equipe de P&D para testar e validar formulações.'
         },
     ]
 
     const education = [
         {
-            degree: 'Bacharel em Ciência da Computação',
-            school: 'Universidade Federal',
-            period: '2015 - 2019',
+            degree: 'Bacharel em Engenharia de Software',
+            school: 'Universidade Catolica de Santa Catarina',
+            period: '2024 - Presente',
             description: 'Focado em desenvolvimento de software, algoritmos e estruturas de dados.'
         },
         {
-            degree: 'Curso Técnico em Informática',
-            school: 'Instituto Tecnológico',
-            period: '2013 - 2015',
-            description: 'Base sólida em programação e sistemas de informação.'
+            degree: 'Curso Técnico em Química',
+            school: 'Instituto Federal de Santa Catarina',
+            period: '2019 - 2023',
+            description: 'Apesar de eu não seguir a área de química, o curso integrado ao ensino médio me proporcionou uma base sólida em metodologias científicas e analíticas, habilidades que aplico no desenvolvimento de software.'
         },
     ]
 
@@ -74,8 +67,16 @@ const About = () => {
                         <div className="flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-12">
                             <div className="flex-shrink-0">
                                 <div className="w-48 h-48 rounded-2xl bg-gradient-to-br from-blue-400 to-purple-600 p-1">
-                                    <div className="w-full h-full rounded-2xl bg-gray-200 dark:bg-gray-600 flex items-center justify-center">
-                                        <span className="text-6xl font-bold text-gray-600 dark:text-gray-300">SN</span>
+                                    <div className="w-full h-full rounded-2xl bg-gray-200 dark:bg-gray-600 flex items-center justify-center overflow-hidden">
+                                        <img
+                                            src="/portfolio/profile.jpg"
+                                            alt="Gabriel Machado Queiroz"
+                                            className="w-full h-full object-cover rounded-2xl"
+                                            onError={(e) => {
+                                                e.currentTarget.style.display = 'none'
+                                                console.log('Erro ao carregar imagem na página About')
+                                            }}
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -85,10 +86,7 @@ const About = () => {
                                     Gabriel Machado Queiroz
                                 </h2>
                                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                    Estudante de Engenharia de Software no Centro Universitário Católica de Santa Catarina, com experiência em desenvolvimento de sistemas, sites e jogos. Tenho atuado em projetos acadêmicos e extracurriculares que me proporcionaram vivência prática em linguagens como Java, Python, JavaScript (Node, React), além de integração com MySQL.
                                 </p>
 
                                 <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-gray-600 dark:text-gray-300">

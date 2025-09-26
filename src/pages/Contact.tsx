@@ -43,19 +43,19 @@ const Contact = () => {
         {
             icon: Mail,
             label: 'Email',
-            value: 'seu@email.com',
-            href: 'mailto:seu@email.com'
+            value: 'gbrielmq1213@gmail.com',
+            href: 'mailto:gbrielmq1213@gmail.com'
         },
         {
             icon: Phone,
             label: 'Telefone',
-            value: '+55 (11) 99999-9999',
-            href: 'tel:+5511999999999'
+            value: '+55 (47) 99259-4556',
+            href: 'tel:+55(47) 9925-5456'
         },
         {
             icon: MapPin,
             label: 'Localização',
-            value: 'São Paulo, Brasil',
+            value: 'Jaraguá do Sul, Santa Catarina',
             href: '#'
         },
     ]

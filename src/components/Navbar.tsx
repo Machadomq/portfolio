@@ -41,7 +41,7 @@ const Navbar = () => {
                             <div className="absolute inset-0 bg-blue-600 dark:bg-blue-400 opacity-20 rounded-lg scale-110 group-hover:scale-125 transition-transform" />
                         </div>
                         <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                            Portfolio
+                            GM
                         </span>
                     </Link>
 
