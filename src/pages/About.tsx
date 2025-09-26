@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Calendar, MapPin, Code, Briefcase, GraduationCap } from 'lucide-react'
+import { Calendar, MapPin, Code, GraduationCap } from 'lucide-react'
 
 const About = () => {
     const skills = [
@@ -59,7 +59,7 @@ const About = () => {
                         Sobre Mim
                     </h1>
                     <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                       Sou estudante Bacharel em Engenharia de software na Universidade Catolica de Santa Catarina, e trabalho em uma industria alimenticia em Jaraguá do sul, Santa Catarina. 
+                        Sou estudante Bacharel em Engenharia de software na Universidade Catolica de Santa Catarina, e trabalho em uma industria alimenticia em Jaraguá do sul, Santa Catarina.
                     </p>
                 </motion.div>
 
@@ -97,7 +97,7 @@ const About = () => {
                                         <span>Santa Catarina, Brasil</span>
                                     </div>
                                     <div className="flex items-center justify-center lg:justify-start space-x-2">
-                                       
+
                                     </div>
                                 </div>
                             </div>
