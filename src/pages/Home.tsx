@@ -52,7 +52,7 @@ const Home = () => {
                                 <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 p-1">
                                     <div className="w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center relative">
                                         <img
-                                            src="/profile.jpg"
+                                            src="/portfolio/profile.jpg"
                                             alt="Gabriel Machado"
                                             className="absolute inset-0 w-full h-full object-cover rounded-full z-0"
                                             style={{ zIndex: 0 }}
@@ -105,7 +105,7 @@ const Home = () => {
                             </Link>
 
                             <motion.a
-                                href="/Curriculo Gabriel Machado-TI.pdf"
+                                href="/portfolio/cv.pdf"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="px-8 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors flex items-center space-x-2"
