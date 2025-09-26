@@ -125,10 +125,10 @@ const Contact = () => {
                                 Sobre Respostas
                             </h3>
                             <div className="space-y-3 text-gray-600 dark:text-gray-300">
-                                <p>⚡ Respondo em até 24 horas</p>
-                                <p>🌍 Disponível para projetos remotos</p>
-                                <p>💬 Prefiro conversas por email primeiro</p>
-                                <p>📱 Disponível para calls quando necessário</p>
+                                <p> Respondo em até 24 horas</p>
+                                <p> Disponível para projetos remotos</p>
+                                <p> Prefiro conversas por email primeiro</p>
+                                <p> Disponível para calls quando necessário</p>
                             </div>
                         </motion.div>
                     </motion.div>

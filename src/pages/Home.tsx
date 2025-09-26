@@ -48,11 +48,18 @@ const Home = () => {
                             className="mb-8"
                         >
                             <div className="relative inline-block">
+                                {/* Avatar Image as background layer */}
                                 <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 p-1">
-                                    <div className="w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                                        <span className="text-4xl font-bold text-gray-600 dark:text-gray-300">
-                                            SN
-                                        </span>
+                                    <div className="w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center relative">
+                                        <img
+                                            src="src/img/IMG_2209.jpg"
+                                            alt=""
+                                            className="absolute inset-0 w-full h-full object-cover rounded-full z-0"
+                                            style={{ zIndex: 0 }}
+                                        />
+                                        {/* You can place icons here with higher z-index if needed */}
+                                        {/* Example: */}
+                                        {/* <Icon className="relative z-10" /> */}
                                     </div>
                                 </div>
                                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white dark:border-gray-900 animate-pulse" />
@@ -98,7 +105,7 @@ const Home = () => {
                             </Link>
 
                             <motion.a
-                                href="/cv.pdf"
+                                href="/Curriculo Gabriel Machado-TI.pdf"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="px-8 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors flex items-center space-x-2"
@@ -115,20 +122,43 @@ const Home = () => {
                             className="flex justify-center space-x-6 mt-12"
                         >
                             {[
-                                { icon: Github, href: '#', label: 'GitHub' },
-                                { icon: Linkedin, href: '#', label: 'LinkedIn' },
-                                { icon: Mail, href: 'mailto:seu@email.com', label: 'Email' },
-                            ].map(({ icon: Icon, href, label }) => (
-                                <motion.a
-                                    key={label}
-                                    href={href}
-                                    whileHover={{ scale: 1.1, y: -2 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-shadow text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-                                    aria-label={label}
-                                >
-                                    <Icon className="w-6 h-6" />
-                                </motion.a>
+                                { icon: Github, href: 'https://github.com/Machadomq', label: 'GitHub' },
+                                { icon: Linkedin, href: 'https://www.linkedin.com/in/gabriel-machadomq', label: 'LinkedIn' },
+                                {
+                                    icon: Mail,
+                                    label: 'Copiar Email',
+                                    onClick: () => {
+                                        navigator.clipboard.writeText('gbrielmq1213@gmail.com');
+                                        alert('Email copiado!');
+                                    },
+                                },
+                            ].map(({ icon: Icon, href, label, onClick }) => (
+                                href ? (
+                                    <motion.a
+                                        key={label}
+                                        href={href}
+                                        whileHover={{ scale: 1.1, y: -2 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-shadow text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                                        aria-label={label}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <Icon className="w-6 h-6" />
+                                    </motion.a>
+                                ) : (
+                                    <motion.button
+                                        key={label}
+                                        type="button"
+                                        onClick={onClick}
+                                        whileHover={{ scale: 1.1, y: -2 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-shadow text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                                        aria-label={label}
+                                    >
+                                        <Icon className="w-6 h-6" />
+                                    </motion.button>
+                                )
                             ))}
                         </motion.div>
                     </motion.div>
