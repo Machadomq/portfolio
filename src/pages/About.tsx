@@ -52,7 +52,7 @@ const About = () => {
                         Sobre Mim
                     </h1>
                     <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                        Sou estudante Bacharel em Engenharia de software na Universidade Catolica de Santa Catarina, e trabalho em uma industria alimenticia em Jaraguá do sul, Santa Catarina.
+                        Sou estudante Bacharel em Engenharia de software na Universidade Catolica de Santa Catarina e trabalho em uma industria alimenticia em Jaraguá do sul, Santa Catarina.
                     </p>
                 </motion.div>
 
