@@ -1,6 +1,90 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { ExternalLink, Github, Filter, Search, Eye } from 'lucide-react'
+import { ExternalLink, Github, Filter, Search, Eye, ChevronLeft, ChevronRight } from 'lucide-react'
+
+// Componente de Carrossel de Imagens
+const ImageCarousel = ({ images, title, className = "" }: { images: string[], title: string, className?: string }) => {
+    const [currentIndex, setCurrentIndex] = useState(0)
+
+    // Auto-play do carrossel
+    useEffect(() => {
+        if (images.length <= 1) return
+
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) =>
+                prevIndex === images.length - 1 ? 0 : prevIndex + 1
+            )
+        }, 4000) // Troca a cada 4 segundos
+
+        return () => clearInterval(interval)
+    }, [images.length])
+
+    const goToPrevious = () => {
+        setCurrentIndex(currentIndex === 0 ? images.length - 1 : currentIndex - 1)
+    }
+
+    const goToNext = () => {
+        setCurrentIndex(currentIndex === images.length - 1 ? 0 : currentIndex + 1)
+    }
+
+    if (images.length === 0) {
+        return (
+            <div className={`bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center ${className}`}>
+                <span className="text-white text-4xl font-bold">{title.charAt(0)}</span>
+            </div>
+        )
+    }
+
+    return (
+        <div className={`relative ${className}`}>
+            {/* Imagem atual */}
+            <img
+                src={images[currentIndex]}
+                alt={`${title} - Imagem ${currentIndex + 1}`}
+                className="w-full h-full object-cover transition-opacity duration-500"
+                onError={(e) => {
+                    e.currentTarget.style.display = 'none'
+                }}
+            />
+
+            {/* Overlay escuro */}
+            <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition-all duration-300" />
+
+            {/* Controles do carrossel (aparecem no hover) */}
+            {images.length > 1 && (
+                <>
+                    <button
+                        onClick={goToPrevious}
+                        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-opacity-70"
+                    >
+                        <ChevronLeft className="w-4 h-4" />
+                    </button>
+
+                    <button
+                        onClick={goToNext}
+                        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-opacity-70"
+                    >
+                        <ChevronRight className="w-4 h-4" />
+                    </button>
+
+                    {/* Indicadores de página */}
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                        {images.map((_: string, index: number) => (
+                            <button
+                                key={index}
+                                onClick={() => setCurrentIndex(index)}
+                                className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentIndex
+                                    ? 'bg-white'
+                                    : 'bg-white bg-opacity-50 hover:bg-opacity-75'
+                                    }`}
+                            />
+                        ))}
+                    </div>
+                </>
+            )}
+        </div>
+    )
+}
 
 const Projects = () => {
     const [selectedCategory, setSelectedCategory] = useState('all')
@@ -17,36 +101,34 @@ const Projects = () => {
     const projects = [
         {
             id: 1,
-            title: 'E-commerce Platform',
+            title: 'PlaySpot Quadras Esportivas',
             category: 'web',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Plataforma completa de e-commerce com painel administrativo, carrinho de compras e sistema de pagamentos.',
-            image: '/api/placeholder/600/400',
-            technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+            description: 'Plataforma web para reservas de quadras esportivas, permitindo aos usuários encontrar, reservar e pagar por quadras em sua área local com integração de mapas e avaliações. Além de tudo isso o sistema conta com um painel administrativo completo para gerenciar as quadras, reservas e usuários de forma eficiente.',
+            images: [
+                'src/img/printplayspothome.jpg',
+                'src/img/Captura de tela 2025-05-13 140651.png',
+                'src/img/Captura de tela 2025-05-06 171605.png',
+                'src/img/Captura de tela 2025-05-07 134851.png'
+            ],
+            technologies: ['Spring-Boot', 'React', 'Tailwind CSS', 'MySQL'],
             github: '#',
             live: '#',
             featured: true
         },
         {
             id: 2,
-            title: 'Task Management App',
-            category: 'web',
-            description: 'Aplicativo de gerenciamento de tarefas com funcionalidades avançadas como colaboração em tempo real, notificações push e relatórios detalhados.',
-            image: '/api/placeholder/600/400',
-            technologies: ['Vue.js', 'Express', 'PostgreSQL', 'Socket.io'],
+            title: 'Elementa',
+            category: 'game',
+            description: 'elementa é um jogo educativo com a tematica de quimica, voltado para estudantes do ensino medio, o jogo apresenta desafios e quebra-cabecas baseados em conceitos quimicos, promovendo o aprendizado de forma interativa e divertida. juntamente com uma aventura repleta de desafios e descobertas.',
+            images: [
+                'src/img/Captura de tela 2025-09-29 135414.png',
+                'src/img/Captura de tela 2025-05-09 165724.png',
+                'src/img/Captura de tela 2025-07-09 205451.png'
+            ],
+            technologies: ['Godot 4.3', 'GDScript', 'Aseprite',],
             github: '#',
             live: '#',
             featured: true
-        },
-        {
-            id: 3,
-            title: 'Weather Mobile App',
-            category: 'mobile',
-            description: 'Aplicativo móvel para previsão do tempo com geolocalização, mapas interativos e notificações personalizadas para condições climáticas extremas.',
-            image: '/api/placeholder/600/400',
-            technologies: ['React Native', 'TypeScript', 'Redux', 'API Integration'],
-            github: '#',
-            live: '#',
-            featured: false
         },
     ]
 
@@ -101,11 +183,12 @@ const Projects = () => {
                                 className="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
                             >
                                 <div className="aspect-video bg-gradient-to-br from-blue-400 to-purple-600 relative overflow-hidden">
-                                    <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition-all duration-300" />
-                                    <div className="absolute inset-0 flex items-center justify-center text-white text-6xl font-bold">
-                                        {project.title.charAt(0)}
-                                    </div>
-                                    <div className="absolute top-4 right-4">
+                                    <ImageCarousel
+                                        images={project.images}
+                                        title={project.title}
+                                        className="w-full h-full"
+                                    />
+                                    <div className="absolute top-4 right-4 z-10">
                                         <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                                             Destaque
                                         </span>
@@ -179,8 +262,8 @@ const Projects = () => {
                                         key={category.id}
                                         onClick={() => setSelectedCategory(category.id)}
                                         className={`px-4 py-2 rounded-lg font-medium transition-colors ${selectedCategory === category.id
-                                                ? 'bg-blue-600 text-white'
-                                                : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                                            ? 'bg-blue-600 text-white'
+                                            : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
                                             }`}
                                     >
                                         {category.name}
@@ -230,12 +313,13 @@ const Projects = () => {
                                     className="group bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
                                 >
                                     <div className="aspect-video bg-gradient-to-br from-blue-400 to-purple-600 relative">
-                                        <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition-all duration-300" />
-                                        <div className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold">
-                                            {project.title.charAt(0)}
-                                        </div>
+                                        <ImageCarousel
+                                            images={project.images}
+                                            title={project.title}
+                                            className="w-full h-full"
+                                        />
                                         {project.featured && (
-                                            <div className="absolute top-3 right-3">
+                                            <div className="absolute top-3 right-3 z-10">
                                                 <span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">
                                                     ⭐
                                                 </span>
