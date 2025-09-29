@@ -2,6 +2,11 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { ExternalLink, Github, Filter, Search, Eye, ChevronLeft, ChevronRight } from 'lucide-react'
 
+// Função helper para obter o caminho correto das imagens
+const getImagePath = (imageName: string) => {
+    return `/portfolio/${imageName}`
+}
+
 // Componente de Carrossel de Imagens
 const ImageCarousel = ({ images, title, className = "" }: { images: string[], title: string, className?: string }) => {
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -105,14 +110,14 @@ const Projects = () => {
             category: 'web',
             description: 'Plataforma web para reservas de quadras esportivas, permitindo aos usuários encontrar, reservar e pagar por quadras em sua área local com integração de mapas e avaliações. Além de tudo isso o sistema conta com um painel administrativo completo para gerenciar as quadras, reservas e usuários de forma eficiente.',
             images: [
-                '/portfolio/printplayspothome.jpg',
-                '/portfolio/Captura de tela 2025-05-13 140651.png',
-                '/portfolio/Captura de tela 2025-05-06 171605.png',
-                '/portfolio/Captura de tela 2025-05-07 134851.png'
+                getImagePath('printplayspothome.jpg'),
+                getImagePath('Captura de tela 2025-05-13 140651.png'),
+                getImagePath('Captura de tela 2025-05-06 171605.png'),
+                getImagePath('Captura de tela 2025-05-07 134851.png')
             ],
             technologies: ['Spring-Boot', 'React', 'Tailwind CSS', 'MySQL'],
-            github: 'https://github.com/Machadomq/PlaySpot/tree/main/playspot/src/main/java/com/playspot',
-            live: 'https://github.com/Machadomq/PlaySpot/tree/main/playspot/src/main/java/com/playspot',
+            github: 'https://github.com/Machadomq/PlaySpot',
+            live: 'https://github.com/Machadomq/PlaySpot',
             featured: true
         },
         {
@@ -121,14 +126,53 @@ const Projects = () => {
             category: 'game',
             description: 'elementa é um jogo educativo com a tematica de quimica, voltado para estudantes do ensino medio, o jogo apresenta desafios e quebra-cabecas baseados em conceitos quimicos, promovendo o aprendizado de forma interativa e divertida. juntamente com uma aventura repleta de desafios e descobertas.',
             images: [
-                '/portfolio/Captura de tela 2025-09-29 135414.png',
-                '/portfolio/Captura de tela 2025-05-09 165724.png',
-                '/portfolio/Captura de tela 2025-07-09 205451.png'
+                getImagePath('Captura de tela 2025-09-29 135414.png'),
+                getImagePath('Captura de tela 2025-05-09 165724.png'),
+                getImagePath('Captura de tela 2025-07-09 205451.png')
             ],
-            technologies: ['Godot 4.3', 'GDScript', 'Aseprite',],
+            technologies: ['Godot 4.3', 'GDScript', 'Aseprite'],
             github: 'https://github.com/Machadomq/elementa',
             live: 'https://github.com/Machadomq/elementa',
             featured: true
+        },
+        {
+            id: 3,
+            title: 'Sistema de Gestão Acadêmica',
+            category: 'web',
+            description: 'Sistema completo para gestão de instituições de ensino, incluindo cadastro de alunos, professores, disciplinas, notas e frequência. Interface intuitiva com dashboard administrativo.',
+            images: [
+                getImagePath('React-icon.svg.png')
+            ],
+            technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
+            github: 'https://github.com/Machadomq',
+            live: 'https://github.com/Machadomq',
+            featured: false
+        },
+        {
+            id: 4,
+            title: 'API REST E-commerce',
+            category: 'api',
+            description: 'API robusta para e-commerce com autenticação JWT, sistema de pagamentos, gestão de produtos, carrinho de compras e integração com correios para cálculo de frete.',
+            images: [
+                getImagePath('React-icon.svg.png')
+            ],
+            technologies: ['Spring Boot', 'Java', 'PostgreSQL', 'JWT'],
+            github: 'https://github.com/Machadomq',
+            live: 'https://github.com/Machadomq',
+            featured: false
+        },
+        {
+            id: 5,
+            title: 'App Mobile Fitness',
+            category: 'mobile',
+            description: 'Aplicativo mobile para acompanhamento de exercícios e dietas, com cronômetro, contador de calorias e gráficos de progresso.',
+            images: [
+                getImagePath('React-icon.svg.png')
+            ],
+            technologies: ['React Native', 'Firebase', 'Expo'],
+            github: 'https://github.com/Machadomq',
+            live: 'https://github.com/Machadomq',
+            featured: false
         },
     ]
 
