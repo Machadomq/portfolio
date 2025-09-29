@@ -111,8 +111,8 @@ const Projects = () => {
                 'src/img/Captura de tela 2025-05-07 134851.png'
             ],
             technologies: ['Spring-Boot', 'React', 'Tailwind CSS', 'MySQL'],
-            github: '#',
-            live: '#',
+            github: 'https://github.com/Machadomq/PlaySpot/tree/main/playspot/src/main/java/com/playspot',
+            live: 'https://github.com/Machadomq/PlaySpot/tree/main/playspot/src/main/java/com/playspot',
             featured: true
         },
         {
@@ -126,8 +126,8 @@ const Projects = () => {
                 'src/img/Captura de tela 2025-07-09 205451.png'
             ],
             technologies: ['Godot 4.3', 'GDScript', 'Aseprite',],
-            github: '#',
-            live: '#',
+            github: 'https://github.com/Machadomq/elementa',
+            live: 'https://github.com/Machadomq/elementa',
             featured: true
         },
     ]
