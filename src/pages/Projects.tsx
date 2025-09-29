@@ -7,7 +7,7 @@ const getImagePath = (imageName: string) => {
     return `/portfolio/${imageName}`
 }
 
-// Componente de Carrossel de Imagens
+// Componente de Carrossel de Imagens - Atualizado
 const ImageCarousel = ({ images, title, className = "" }: { images: string[], title: string, className?: string }) => {
     const [currentIndex, setCurrentIndex] = useState(0)
 
