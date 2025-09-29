@@ -105,10 +105,10 @@ const Projects = () => {
             category: 'web',
             description: 'Plataforma web para reservas de quadras esportivas, permitindo aos usuários encontrar, reservar e pagar por quadras em sua área local com integração de mapas e avaliações. Além de tudo isso o sistema conta com um painel administrativo completo para gerenciar as quadras, reservas e usuários de forma eficiente.',
             images: [
-                'src/img/printplayspothome.jpg',
-                'src/img/Captura de tela 2025-05-13 140651.png',
-                'src/img/Captura de tela 2025-05-06 171605.png',
-                'src/img/Captura de tela 2025-05-07 134851.png'
+                '/portfolio/printplayspothome.jpg',
+                '/portfolio/Captura de tela 2025-05-13 140651.png',
+                '/portfolio/Captura de tela 2025-05-06 171605.png',
+                '/portfolio/Captura de tela 2025-05-07 134851.png'
             ],
             technologies: ['Spring-Boot', 'React', 'Tailwind CSS', 'MySQL'],
             github: 'https://github.com/Machadomq/PlaySpot/tree/main/playspot/src/main/java/com/playspot',
@@ -121,9 +121,9 @@ const Projects = () => {
             category: 'game',
             description: 'elementa é um jogo educativo com a tematica de quimica, voltado para estudantes do ensino medio, o jogo apresenta desafios e quebra-cabecas baseados em conceitos quimicos, promovendo o aprendizado de forma interativa e divertida. juntamente com uma aventura repleta de desafios e descobertas.',
             images: [
-                'src/img/Captura de tela 2025-09-29 135414.png',
-                'src/img/Captura de tela 2025-05-09 165724.png',
-                'src/img/Captura de tela 2025-07-09 205451.png'
+                '/portfolio/Captura de tela 2025-09-29 135414.png',
+                '/portfolio/Captura de tela 2025-05-09 165724.png',
+                '/portfolio/Captura de tela 2025-07-09 205451.png'
             ],
             technologies: ['Godot 4.3', 'GDScript', 'Aseprite',],
             github: 'https://github.com/Machadomq/elementa',
