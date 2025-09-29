@@ -135,45 +135,6 @@ const Projects = () => {
             live: 'https://github.com/Machadomq/elementa',
             featured: true
         },
-        {
-            id: 3,
-            title: 'Sistema de Gestão Acadêmica',
-            category: 'web',
-            description: 'Sistema completo para gestão de instituições de ensino, incluindo cadastro de alunos, professores, disciplinas, notas e frequência. Interface intuitiva com dashboard administrativo.',
-            images: [
-                getImagePath('React-icon.svg.png')
-            ],
-            technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
-            github: 'https://github.com/Machadomq',
-            live: 'https://github.com/Machadomq',
-            featured: false
-        },
-        {
-            id: 4,
-            title: 'API REST E-commerce',
-            category: 'api',
-            description: 'API robusta para e-commerce com autenticação JWT, sistema de pagamentos, gestão de produtos, carrinho de compras e integração com correios para cálculo de frete.',
-            images: [
-                getImagePath('React-icon.svg.png')
-            ],
-            technologies: ['Spring Boot', 'Java', 'PostgreSQL', 'JWT'],
-            github: 'https://github.com/Machadomq',
-            live: 'https://github.com/Machadomq',
-            featured: false
-        },
-        {
-            id: 5,
-            title: 'App Mobile Fitness',
-            category: 'mobile',
-            description: 'Aplicativo mobile para acompanhamento de exercícios e dietas, com cronômetro, contador de calorias e gráficos de progresso.',
-            images: [
-                getImagePath('React-icon.svg.png')
-            ],
-            technologies: ['React Native', 'Firebase', 'Expo'],
-            github: 'https://github.com/Machadomq',
-            live: 'https://github.com/Machadomq',
-            featured: false
-        },
     ]
 
     const filteredProjects = projects.filter(project => {
